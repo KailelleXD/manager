@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import firebase from 'firebase';
 import ReduxThunk from 'redux-thunk';
 import reducers from './src/reducers';
-import { Header } from './src/components/common/Header';
-import LoginForm from './src/components/LoginForm';
+import Router from './src/Router'
 
 class App extends Component {
     componentWillMount() {
@@ -27,12 +25,7 @@ class App extends Component {
 
         return (
             <Provider store={store}>
-                <View
-                    style={{ marginTop: 25 }}
-                >
-                    <Header headerText={"Login / Create User"}/>
-                    <LoginForm />
-                </View>
+                <Router />
             </Provider>
         );
     }
