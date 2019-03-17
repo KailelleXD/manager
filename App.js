@@ -28,7 +28,7 @@ class App extends Component {
         return (
             <Provider store={store}>
                 <View
-                    style={{ marginTop: 20 }}
+                    style={{ marginTop: 25 }}
                 >
                     <Header headerText={"Login / Create User"}/>
                     <LoginForm />
