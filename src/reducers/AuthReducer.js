@@ -27,7 +27,10 @@ export default (state = INITIAL_STATE, action) => {
                 ...state, 
                 user: action.payload, 
                 loading: false, 
-                error: '' };
+                error: '',
+                email: '',
+                password: '',
+            };
         case LOGIN_USER_FAIL:
             return {
                 ...state,
